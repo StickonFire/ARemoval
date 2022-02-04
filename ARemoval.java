@@ -1,8 +1,11 @@
 public class ARemoval{
     public static String removeA(String remove){
-        while(remove.indexOf("a") != -1){
-            int index = remove.indexOf("a");
-            remove = (remove.substring(0,index) + remove.substring(index+1));
+        String[] vowels = {"a","A"};
+        for(String v : vowels){
+            while(remove.indexOf(v) != -1){
+                int index = remove.indexOf(v);
+                remove = (remove.substring(0,index) + remove.substring(index+1));
+            }
         }
         return remove;
     }
